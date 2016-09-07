@@ -1,29 +1,23 @@
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import java.lang.*;
 
-public class FrameDemo {
-    private static void GUI() {
+public class main {
+  public static void GUI(String NAME, int x, int y, int closeOperation) {
         //Create and set up the window.
-        JFrame frame = new JFrame("FrameDemo");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JFrame frame = new JFrame(NAME);
+        frame.setDefaultCloseOperation(closeOperation);
  
         JLabel emptyLabel = new JLabel("");
-        emptyLabel.setPreferredSize(new Dimension(175, 100));
+        emptyLabel.setPreferredSize(new Dimension(x, y));
         frame.getContentPane().add(emptyLabel, BorderLayout.CENTER);
  
         //Display the window.
         frame.pack();
         frame.setVisible(true);
-    }
- 
-    public static void main(String[] args) {
-        //Schedule a job for the event-dispatching thread:
-        //creating and showing this application's GUI.
-        javax.swing.SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                createAndShowGUI();
-            }
-        });
-    }
-}
+    };
+  public static void main() {
+		GUI("Hello world", 175, 200, 4);
+	};
+};
