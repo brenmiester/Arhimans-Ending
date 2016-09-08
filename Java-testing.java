@@ -20,4 +20,5 @@ public class main {
   public static void main() {
 		GUI("Hello world", 175, 200, 4);
 	};
+  main()
 };
